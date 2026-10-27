@@ -1,154 +1,780 @@
-<!DOCTYPE html>
-<html>
 
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>My First Website</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#f8eddb">
+
+    <title>sneha.exe ✿ my little corner of the internet</title>
+
+    <meta name="description"
+          content="A little scrapbook about Sneha — her first website, hobbies, favourite things and everyday life.">
+
+    <style>
+        :root {
+            --paper: #fffaf0;
+            --background: #f8eddb;
+            --ink: #292334;
+            --purple: #7552a5;
+            --pink: #f4b9cc;
+            --green: #d5e8c9;
+            --yellow: #ffe79a;
+            --blue: #d5e8f7;
+            --line: #e6d8c5;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 90px;
+        }
+
+        body {
+            margin: 0;
+            color: var(--ink);
+            background-color: var(--background);
+            background-image: radial-gradient(#cbb99e 0.7px, transparent 0.7px);
+            background-size: 17px 17px;
+            font-family: "Trebuchet MS", Arial, sans-serif;
+            line-height: 1.7;
+        }
+
+        a {
+            color: var(--purple);
+            text-underline-offset: 4px;
+        }
+
+        a:hover {
+            color: #b33f79;
+        }
+
+        button, a {
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        button:focus-visible, a:focus-visible {
+            outline: 3px dashed var(--purple);
+            outline-offset: 5px;
+        }
+
+        .site {
+            width: min(100% - 32px, 1040px);
+            margin: 28px auto;
+        }
+
+        .topbar {
+            position: sticky;
+            top: 10px;
+            z-index: 10;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+            padding: 12px 18px;
+            background: var(--paper);
+            border: 2px solid var(--ink);
+            border-radius: 15px;
+            box-shadow: 4px 4px 0 var(--ink);
+        }
+
+        .brand {
+            color: var(--ink);
+            font-family: Georgia, serif;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .nav {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+            gap: 12px;
+            font-size: 0.85rem;
+        }
+
+        .nav a {
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .hero {
+            position: relative;
+            margin: 38px 0;
+            padding: clamp(26px, 7vw, 76px);
+            overflow: hidden;
+            background: var(--pink);
+            border: 2px solid var(--ink);
+            border-radius: 8px 30px 10px 25px;
+            box-shadow: 8px 8px 0 var(--ink);
+            transform: rotate(-0.4deg);
+        }
+
+        .eyebrow {
+            display: inline-block;
+            padding: 5px 12px;
+            background: var(--paper);
+            border: 1px dashed var(--ink);
+            border-radius: 4px;
+            font-size: 0.78rem;
+            font-weight: bold;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+
+        h1, h2, h3, p {
+            overflow-wrap: anywhere;
+        }
+
+        .hero h1 {
+            max-width: 690px;
+            margin: 20px 0 12px;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: clamp(3.1rem, 9vw, 6.8rem);
+            font-weight: 900;
+            letter-spacing: -0.075em;
+            line-height: 0.98;
+        }
+
+        .hero h1 span {
+            color: var(--purple);
+            font-style: italic;
+        }
+
+        .hero-copy {
+            max-width: 470px;
+            font-size: 1.08rem;
+        }
+
+        .sticker {
+            display: inline-block;
+            padding: 9px 15px;
+            background: var(--yellow);
+            border: 2px solid var(--ink);
+            border-radius: 50%;
+            font-size: 0.9rem;
+            font-weight: bold;
+            transform: rotate(7deg);
+        }
+
+        .hero-sticker {
+            position: absolute;
+            top: 24px;
+            right: 25px;
+            font-size: 1.3rem;
+        }
+
+        .hero-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 26px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 16px;
+            color: var(--ink);
+            background: var(--paper);
+            border: 2px solid var(--ink);
+            border-radius: 5px;
+            box-shadow: 3px 3px 0 var(--ink);
+            font-weight: bold;
+            text-decoration: none;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .button:hover {
+            color: var(--ink);
+            box-shadow: 1px 1px 0 var(--ink);
+            transform: translate(2px, 2px);
+        }
+
+        .section {
+            margin: 46px 0;
+            scroll-margin-top: 95px;
+        }
+
+        .section-heading {
+            display: flex;
+            align-items: baseline;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 22px;
+        }
+
+        .section-heading h2 {
+            margin: 0;
+            font-family: Georgia, serif;
+            font-size: clamp(1.8rem, 5vw, 2.7rem);
+            letter-spacing: -0.04em;
+        }
+
+        .section-heading span {
+            color: #75647b;
+            font-size: 0.85rem;
+        }
+
+        .paper {
+            padding: clamp(20px, 4vw, 34px);
+            background: var(--paper);
+            border: 2px solid var(--ink);
+            box-shadow: 5px 5px 0 var(--ink);
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: minmax(0, 1.2fr) minmax(180px, 0.8fr);
+            align-items: center;
+            gap: 30px;
+        }
+
+        .about-note {
+            position: relative;
+            transform: rotate(-1deg);
+        }
+
+        .about-note::before {
+            content: "A LITTLE INTRO";
+            display: inline-block;
+            margin-bottom: 12px;
+            padding: 4px 10px;
+            background: var(--green);
+            font-size: 0.72rem;
+            font-weight: bold;
+            letter-spacing: 0.1em;
+        }
+
+        .photo-frame {
+            max-width: 290px;
+            margin: auto;
+            padding: 12px 12px 42px;
+            background: white;
+            border: 1px solid #d6cabb;
+            box-shadow: 3px 4px 10px #00000015;
+            transform: rotate(3deg);
+        }
+
+        .photo-frame img {
+            display: block;
+            width: 100%;
+            aspect-ratio: 4 / 5;
+            object-fit: cover;
+            background: var(--blue);
+            color: var(--ink);
+        }
+
+        .photo-frame figcaption {
+            padding-top: 10px;
+            font-family: Georgia, serif;
+            text-align: center;
+        }
+
+        .tape {
+            width: 82px;
+            height: 23px;
+            margin: -24px auto 12px;
+            background: #ffe79acc;
+            transform: rotate(-7deg);
+        }
+
+        .note-label {
+            display: inline-block;
+            margin-bottom: 10px;
+            padding: 4px 10px;
+            background: var(--yellow);
+            font-size: 0.75rem;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .hobby-grid, .favourites-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 17px;
+        }
+
+        .scrap {
+            min-width: 0;
+            padding: 23px;
+            border: 2px solid var(--ink);
+            box-shadow: 4px 4px 0 var(--ink);
+            transition: transform 0.2s;
+        }
+
+        .scrap:hover {
+            transform: translateY(-4px) rotate(0deg) !important;
+        }
+
+        .scrap h3 {
+            margin: 8px 0;
+            font-family: Georgia, serif;
+            font-size: 1.3rem;
+        }
+
+        .scrap p {
+            margin-bottom: 0;
+        }
+
+        .scrap .symbol {
+            font-size: 1.8rem;
+        }
+
+        .tilt-left {
+            transform: rotate(-1.2deg);
+        }
+
+        .tilt-right {
+            transform: rotate(1deg);
+        }
+
+        .pink {
+            background: #f8d6df;
+        }
+
+        .green {
+            background: #dcebd3;
+        }
+
+        .yellow {
+            background: #fff0b9;
+        }
+
+        .blue {
+            background: #dcebf8;
+        }
+
+        .purple {
+            background: #e6d9f7;
+        }
+
+        .favourite-link {
+            display: inline-block;
+            margin-top: 8px;
+            font-weight: bold;
+        }
+
+        .routine {
+            position: relative;
+            margin: 0;
+            padding: 0 0 0 28px;
+            list-style: none;
+        }
+
+        .routine::before {
+            position: absolute;
+            top: 10px;
+            bottom: 10px;
+            left: 7px;
+            width: 3px;
+            background: var(--purple);
+            content: "";
+        }
+
+        .routine li {
+            position: relative;
+            margin: 0 0 20px;
+            padding: 10px 14px;
+            background: #f4edf9;
+            border-bottom: 1px dashed #b9a8c8;
+        }
+
+        .routine li::before {
+            position: absolute;
+            top: 17px;
+            left: -27px;
+            width: 13px;
+            height: 13px;
+            background: var(--yellow);
+            border: 2px solid var(--ink);
+            border-radius: 50%;
+            content: "";
+        }
+
+        .routine li:last-child {
+            margin-bottom: 0;
+        }
+
+        .table-wrap {
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+        }
+
+        th, td {
+            padding: 13px;
+            border: 1px solid #d9c9b5;
+        }
+
+        th {
+            background: var(--purple);
+            color: white;
+        }
+
+        tbody tr:nth-child(odd) {
+            background: #f5ebff;
+        }
+
+        tbody tr:nth-child(even) {
+            background: #fff4df;
+        }
+
+        .ending {
+            position: relative;
+            margin: 48px 0 24px;
+            padding: 35px 20px;
+            background: var(--green);
+            border: 2px dashed var(--ink);
+            text-align: center;
+            transform: rotate(0.4deg);
+        }
+
+        .ending h2 {
+            margin: 0;
+            font-family: Georgia, serif;
+            font-size: clamp(1.8rem, 5vw, 3rem);
+        }
+
+        .ending p {
+            margin-bottom: 0;
+        }
+
+        .footer {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 8px;
+            padding: 16px 0;
+            color: #665a6c;
+            font-size: 0.82rem;
+        }
+
+        .back-top {
+            font-weight: bold;
+        }
+
+        .reveal {
+            animation: appear 0.7s ease both;
+        }
+
+        @keyframes appear {
+            from {
+                opacity: 0;
+                transform: translateY(12px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 640px) {
+            .site {
+                width: min(100% - 22px, 1040px);
+                margin-top: 15px;
+            }
+
+            .topbar {
+                align-items: flex-start;
+                flex-direction: column;
+            }
+
+            .nav {
+                justify-content: flex-start;
+                gap: 8px 14px;
+            }
+
+            .hero {
+                margin-top: 28px;
+                padding: 30px 22px;
+            }
+
+            .hero-sticker {
+                top: 14px;
+                right: 12px;
+                font-size: 1rem;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .about-note {
+                transform: none;
+            }
+
+            .photo-frame {
+                width: min(100%, 280px);
+            }
+
+            .hobby-grid, .favourites-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .scrap {
+                transform: none;
+            }
+
+            .section {
+                margin: 36px 0;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                scroll-behavior: auto !important;
+                animation: none !important;
+                transition: none !important;
+            }
+        }
+    </style>
 </head>
 
-<body bgcolor="lightblue" text="black">
+<body id="top">
+    <div class="site">
 
-    <center>
+        <header class="topbar">
+            <a class="brand" href="#top">sneha.exe ✿</a>
 
-        <font face="Arial" color="purple" size="6">
-            <b><u>My First Website</u></b>
-        </font>
+            <nav class="nav" aria-label="Main navigation">
+                <a href="#about">about</a>
+                <a href="#hobbies">hobbies</a>
+                <a href="#favourites">faves</a>
+                <a href="#routine">my day</a>
+                <a href="#subjects">subjects</a>
+            </nav>
+        </header>
 
-        <p>
-            <font face="Arial" color="blue" size="4">
-                Welcome to my first website!
-            </font>
-        </p>
+        <main>
+            <section class="hero reveal">
+                <span class="eyebrow">✿ personal website · internet corner no. 01</span>
+                <span class="sticker hero-sticker" aria-hidden="true">oh, hi! ★</span>
 
-    </center>
+                <h1>My little<br>corner of<br><span>the internet.</span></h1>
 
-    <hr>
+                <p class="hero-copy">
+                    Hello, internet stranger! Welcome to my first website —
+                    a tiny collection of things about me, things I love,
+                    and the everyday stuff in between.
+                </p>
 
-    <h2>
-        <font face="Arial" color="darkblue">
-            About Me
-        </font>
-    </h2>
+                <div class="hero-links">
+                    <a class="button" href="#about">come on in ↘</a>
+                    <a class="button" href="#favourites">peek at my faves ♡</a>
+                </div>
 
-    <img src="sneha.jpg" alt="Sneha Singh" width="200">
+                <p><small>Made with HTML, a little CSS, and lots of ✿ energy.</small></p>
+            </section>
 
-    <p>
-        <font face="Arial" size="4">
-            Hello! My name is Sneha.
-            I am a Computer Science student.
-            I like learning new technologies and creating websites.
-        </font>
-    </p>
+            <section class="section" id="about">
+                <div class="section-heading">
+                    <h2>01. So, who's Sneha?</h2>
+                    <span>the person behind the pixels</span>
+                </div>
 
-    <hr>
+                <div class="paper about-grid">
+                    <div class="about-note">
+                        <span class="note-label">a note about me</span>
+                        <h3>Hello, I'm Sneha! ♡</h3>
+                        <p>
+                            I'm a Computer Science student who likes learning
+                            new technologies and creating websites.
+                        </p>
+                        <p>
+                            This is my little space on the internet — starting
+                            with the basics and adding a bit more personality
+                            along the way.
+                        </p>
+                        <p><strong>Current mission:</strong> keep learning, keep creating.</p>
+                    </div>
 
-    <h2>
-        <font face="Arial" color="darkblue">
-            My Hobbies
-        </font>
-    </h2>
+                    <figure class="photo-frame">
+                        <div class="tape" aria-hidden="true"></div>
+                        <img src="sneha.jpg" alt="Sneha Singh">
+                        <figcaption>that's me! ✿</figcaption>
+                    </figure>
+                </div>
+            </section>
 
-    <ul>
-        <li><font face="Arial">Dancing</font></li>
-        <li><font face="Arial">Singing</font></li>
-        <li><font face="Arial">Reading Books</font></li>
-        <li><font face="Arial">Photography</font></li>
-    </ul>
+            <section class="section" id="hobbies">
+                <div class="section-heading">
+                    <h2>02. Things I enjoy</h2>
+                    <span>little pieces of me</span>
+                </div>
 
-    <hr>
+                <div class="hobby-grid">
+                    <article class="scrap pink tilt-left">
+                        <span class="symbol" aria-hidden="true">💃</span>
+                        <h3>Dancing</h3>
+                        <p>One of my favourite ways to enjoy myself.</p>
+                    </article>
 
-    <h2>
-        <font face="Arial" color="darkblue">
-            My Favorite Things
-        </font>
-    </h2>
+                    <article class="scrap yellow tilt-right">
+                        <span class="symbol" aria-hidden="true">🎤</span>
+                        <h3>Singing</h3>
+                        <p>A little music belongs in the mix.</p>
+                    </article>
 
-    <ul>
-        <li>
-            Favorite Book:
-            <a href="https://www.goodreads.com/book/show/200767109-before-we-say-goodbye">
-                <font color="purple">
-                    Before We Say Goodbye
-                </font>
-            </a>
-        </li>
+                    <article class="scrap green tilt-right">
+                        <span class="symbol" aria-hidden="true">📚</span>
+                        <h3>Reading books</h3>
+                        <p>Stories are always welcome here.</p>
+                    </article>
 
-        <li>
-            Favorite Singer:
-            <a href="https://www.taylorswift.com/">
-                <font color="purple">
-                    Taylor Swift
-                </font>
-            </a>
-        </li>
+                    <article class="scrap blue tilt-left">
+                        <span class="symbol" aria-hidden="true">📷</span>
+                        <h3>Photography</h3>
+                        <p>Collecting moments, one picture at a time.</p>
+                    </article>
+                </div>
+            </section>
 
-        <li>
-            Favorite Movie:
-            <a href="https://www.netflix.com/">
-                <font color="purple">
-                    To All the Boys I've Loved Before
-                </font>
-            </a>
-        </li>
-    </ul>
+            <section class="section" id="favourites">
+                <div class="section-heading">
+                    <h2>03. The favourites shelf</h2>
+                    <span>things worth a little bookmark</span>
+                </div>
 
-    <hr>
+                <div class="favourites-grid">
+                    <article class="scrap purple tilt-left">
+                        <span class="symbol" aria-hidden="true">📖</span>
+                        <span class="note-label">favourite book</span>
+                        <h3>Before We Say Goodbye</h3>
+                        <a class="favourite-link"
+                           href="https://www.goodreads.com/book/show/200767109-before-we-say-goodbye"
+                           target="_blank" rel="noopener noreferrer">
+                            Find it on Goodreads ↗
+                        </a>
+                    </article>
 
-    <h2>
-        <font face="Arial" color="darkblue">
-            My Daily Routine
-        </font>
-    </h2>
+                    <article class="scrap pink tilt-right">
+                        <span class="symbol" aria-hidden="true">🎶</span>
+                        <span class="note-label">favourite singer</span>
+                        <h3>Taylor Swift</h3>
+                        <a class="favourite-link"
+                           href="https://www.taylorswift.com/"
+                           target="_blank" rel="noopener noreferrer">
+                            Visit the official website ↗
+                        </a>
+                    </article>
 
-    <ol>
-        <li>Wake up</li>
-        <li>Get ready</li>
-        <li>Go to college</li>
-        <li>Attend classes</li>
-        <li>Study</li>
-        <li>Relax and spend time with family</li>
-        <li>Go to sleep</li>
-    </ol>
+                    <article class="scrap blue tilt-left">
+                        <span class="symbol" aria-hidden="true">🎬</span>
+                        <span class="note-label">favourite movie</span>
+                        <h3>To All the Boys I've Loved Before</h3>
+                        <a class="favourite-link"
+                           href="https://www.netflix.com/"
+                           target="_blank" rel="noopener noreferrer">
+                            Visit Netflix ↗
+                        </a>
+                    </article>
 
-    <hr>
+                    <article class="scrap yellow tilt-right">
+                        <span class="symbol" aria-hidden="true">💌</span>
+                        <span class="note-label">tiny reminder</span>
+                        <h3>Keep the good stuff close.</h3>
+                        <p>Books, music, movies and moments that make life fun.</p>
+                    </article>
+                </div>
+            </section>
 
-    <h2>
-        <font face="Arial" color="darkblue">
-            My Subjects
-        </font>
-    </h2>
+            <section class="section" id="routine">
+                <div class="section-heading">
+                    <h2>04. A day in my life</h2>
+                    <span>the everyday edition</span>
+                </div>
 
-    <table border="1">
+                <div class="paper">
+                    <ol class="routine">
+                        <li>Wake up ☀️</li>
+                        <li>Get ready</li>
+                        <li>Go to college 🎒</li>
+                        <li>Attend classes</li>
+                        <li>Study 📚</li>
+                        <li>Relax and spend time with family ♡</li>
+                        <li>Go to sleep 🌙</li>
+                    </ol>
+                </div>
+            </section>
 
-        <tr>
-            <th>Subject</th>
-            <th>Favorite?</th>
-        </tr>
+            <section class="section" id="subjects">
+                <div class="section-heading">
+                    <h2>05. The classroom corner</h2>
+                    <span>yes, school stuff too</span>
+                </div>
 
-        <tr>
-            <td>Computer Science</td>
-            <td>Yes</td>
-        </tr>
+                <div class="paper">
+                    <p>A few subjects from my original favourites list:</p>
 
-        <tr>
-            <td>Mathematics</td>
-            <td>Yes</td>
-        </tr>
+                    <div class="table-wrap">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th scope="col">Subject</th>
+                                    <th scope="col">Favourite?</th>
+                                    <th scope="col">Little mark</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Computer Science</td>
+                                    <td>Yes!</td>
+                                    <td>💻</td>
+                                </tr>
+                                <tr>
+                                    <td>Mathematics</td>
+                                    <td>Yes!</td>
+                                    <td>➗</td>
+                                </tr>
+                                <tr>
+                                    <td>English</td>
+                                    <td>Yes!</td>
+                                    <td>✍️</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
 
-        <tr>
-            <td>English</td>
-            <td>Yes</td>
-        </tr>
+            <section class="ending">
+                <span class="sticker">end of this little tour ★</span>
+                <h2>You've reached the bottom!</h2>
+                <p>
+                    Thanks for stopping by my corner of the internet.
+                    Hope you found a little something to smile about. ♡
+                </p>
+                <p><a class="button" href="#top">back to the top ↑</a></p>
+            </section>
+        </main>
 
-    </table>
+        <footer class="footer">
+            <span>© Sneha · my first website, reimagined with love.</span>
+            <a class="back-top" href="#top">back to top ↑</a>
+        </footer>
 
-    <hr>
+    </div>
 
-    <center>
-        <font face="Arial" color="gray" size="3">
-            <i>Thank you for visiting my first website!</i>
-        </font>
-    </center>
+    <script>
+        // Tiny interaction: clicking the site name gives a friendly hello.
+        const brand = document.querySelector(".brand");
 
+        brand.addEventListener("click", function (event) {
+            if (window.scrollY < 20) {
+                event.preventDefault();
+                brand.textContent = "hi again! ♡";
+                window.setTimeout(function () {
+                    brand.textContent = "sneha.exe ✿";
+                }, 1400);
+            }
+        });
+    </script>
 </body>
-
 </html>
