@@ -1,99 +1,92 @@
 
-# ✿ my-first-website
+<div align="center">
 
-> a little corner of the internet, made by Sneha ♡
+# ✿ sneha.exe — my little corner of the internet
 
-My first website started with basic HTML, colourful text, a few lists,
-and a table. This is its scrapbook-inspired redesign — still personal,
-still simple, but with a little more personality.
+### a tiny website, a little chaos, and a whole lot of me. ♡
 
-It's a small reminder that every website starts somewhere.
+*Welcome to my very own corner of the World Wide Web.*
 
-## 🌷 What's inside?
+[![Made with HTML](https://img.shields.io/badge/HTML5-made%20with%20love-e76f91?style=flat-square&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
+[![CSS](https://img.shields.io/badge/CSS3-scrapbook%20magic-8060b7?style=flat-square&logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
+[![JavaScript](https://img.shields.io/badge/JavaScript-a%20little%20motion-f5d778?style=flat-square&logo=javascript&logoColor=29231f)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 
-A tiny tour through some of my favourite things:
-
-- **About Me** — a short introduction and my photo.
-- **My Hobbies** — dancing, singing, reading books and photography.
-- **The Favourites Shelf** — my favourite book, singer and movie.
-- **A Day in My Life** — my everyday routine, in list form.
-- **The Classroom Corner** — a few favourite subjects.
-- **A Little Scrapbook Energy** — paper-like sections, playful colours,
-  tilted notes, stickers and tiny interactions.
-
-## 🎨 The redesign
-
-The original website used basic HTML formatting, a light-blue background,
-purple text and simple lists. The redesign keeps its original content
-while reworking the presentation into a retro-inspired digital scrapbook.
-
-The visual direction:
-
-- Warm paper backgrounds and a soft pastel palette
-- Purple, pink, yellow, green and blue accents
-- Scrapbook-style notes and playful rotations
-- A personal, slightly chaotic internet aesthetic
-- Responsive layouts for desktop and mobile
-
-The goal wasn't to make this feel like a corporate portfolio.
-It was to give a first website a personality of its own.
-
-## 🧰 Built with
-
-| Technology | What it does |
-| --- | --- |
-| HTML5 | Page structure and content |
-| CSS3 | Colours, layouts, scrapbook styling and animations |
-| JavaScript | A small interactive detail |
-| GitHub | Repository and version history |
-
-No framework, package installation or build process is needed.
-
-## 📁 Project structure
-
-```text
-my-first-website/
-├── index.html
-├── sneha.jpg
-└── README.md
-```
-
-`sneha.jpg` is the image referenced by the website. Keep it beside
-`index.html`, or update the image path if its location changes.
-
-## 🚀 Run it locally
-
-1. Clone or download this repository.
-2. Open the project folder.
-3. Open `index.html` in your browser.
-
-That's it. No dependencies to install.
-
-## 🖼️ Preview
-
-A screenshot of the redesigned website can be added here once the
-redesign has been reviewed and published.
-
-<!-- Suggested later:
-![Website preview](screenshots/homepage.png)
--->
-
-## 🌱 Why this project matters
-
-Not every project needs a complicated stack.
-
-This one is a small snapshot of learning web development: starting with
-HTML, experimenting with how content is presented, and discovering how
-CSS and JavaScript can bring a simple page to life.
-
-The original idea stays. The presentation grows.
-
-## 👩🏻‍💻 Made by
-
-**Sneha Singh**
-
-GitHub: [@myselfsneha](https://github.com/myselfsneha)
+</div>
 
 ---
 
-*Made with HTML, CSS, curiosity, and a little bit of chaos. ✿*
+## 💌 wait, what is this?
+
+This is **my first website**, a small personal corner of the internet where I get to introduce myself and share some of the things I like.
+
+Think scrapbook pages, little notes, favourite things, and a hint of that old-school internet feeling.
+
+Nothing too serious. Just a website that feels like *mine*.
+
+## ✨ what's inside?
+
+| Little corner | What's there |
+| --- | --- |
+| 🌷 **A little about me** | An introduction and a few fun details |
+| 💃🏻 **My hobbies** | Dancing, singing, reading books, and photography |
+| 📚 **My favourites** | *Before We Say Goodbye*, Taylor Swift, and *To All the Boys I've Loved Before* |
+| ☁️ **Daily routine** | A simple look at an everyday routine |
+| ✎ **Study desk** | Computer Science, Mathematics, and English |
+| 🎨 **Scrapbook aesthetic** | Paper textures, playful colours, stickers, and tilted cards |
+
+## 🎨 the little design universe
+
+The website takes inspiration from a digital scrapbook and the playful side of the retro internet.
+
+- **Colours:** warm paper, purple, pink, yellow, green, and blue.
+- **Typography:** bold headings, handwritten notes, and a typewriter-style font.
+- **Layout:** layered cards, sticker-like decorations, and little details to explore.
+- **Motion:** subtle scrolling reveals, hover effects, and a moving text strip.
+- **Responsive design:** built to adapt to smaller screens as well as desktop.
+
+The goal wasn't to make another generic personal website. It was to make a little space that feels personal, playful, and slightly chaotic in the best way.
+
+## 🛠️ made with
+
+- HTML5
+- CSS3
+- Vanilla JavaScript
+- Google Fonts
+
+No framework, no complicated setup. Just the basics doing their thing.
+
+## 📁 project structure
+
+```text
+my-first-website/
+├── index.html      # The website and its styling
+├── sneha.jpg       # Personal photo used on the page
+└── README.md       # You're reading it!
+```
+
+## 💻 want to run it locally?
+
+It's pretty simple.
+
+1. Clone or download this repository.
+2. Make sure `index.html` and `sneha.jpg` are in the same folder.
+3. Open `index.html` in your browser.
+
+And that's it. You're in! 🌻
+
+If you're using VS Code, you can also open the folder there and use Live Server if you have that extension installed.
+
+## 🧃 a tiny note about the project
+
+This repository started as a simple first website and is being refreshed as a more expressive little scrapbook.
+
+It's a reminder that you don't need a huge tech stack to make something personal. Sometimes, HTML, CSS, a little JavaScript, and a few ideas are enough to get started.
+
+## ♡ made by
+
+**Sneha**
+
+A little website made with curiosity, creativity, and love.
+
+</div>
+</div>
